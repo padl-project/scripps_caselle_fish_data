@@ -40,4 +40,5 @@ vignettes/*.pdf
 .Rproj.user
 
 ## don't save raw data
+~/raw_data
 /raw_data
