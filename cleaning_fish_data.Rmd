@@ -1,0 +1,54 @@
+---
+title: "Cleaning Fish Data"
+author: "Camila Vargas"
+date: "7/27/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(googledrive)
+library(tidyverse)
+library(here)
+library(glue)
+
+```
+
+## Download data into Rproj
+
+```{r}
+# projects's raw data folder url. Copy pasete the url when you are inside the xxx_raw folder.
+
+folder_url <- "https://drive.google.com/drive/u/1/folders/1qnj2_UJIA6DRHl7BR1V2UFBpNFyHvy4-"
+
+folder_id <- drive_get(as_id(folder_url))
+
+# get the list of files inside the folder
+files <- drive_ls(folder_id)
+
+file_name <- files$name
+
+# download files inside folder
+# walk(files$id, ~ drive_download(as_id(.x),
+#                                  path = glue("~/raw_data/", folder$name)))
+
+for (i in seq_along(files$name)) {
+  
+  #get each row
+  file_info <- files[i, ]
+  
+  #mkdir
+  #dir.create(files$name[i])
+  
+  #download files
+  for (file_i in seq_along(file_info$name)) {
+      drive_download(
+        as_id(file_info$id[file_i]),
+        path = paste0(getwd(), "/raw_data/", file_info$name[file_i]),
+        overwrite = T)
+
+  }
+}
+
+
+```
+
