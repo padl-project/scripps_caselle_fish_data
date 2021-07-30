@@ -5,44 +5,44 @@ date: "7/27/2021"
 output: html_document
 ---
 
+## Set up
 ```{r setup, include=FALSE}
+
 library(googledrive)
-library(tidyverse)
 library(here)
-library(glue)
+library(data.table)
+library(tidyverse)
+library(readxl)
 
 ```
 
-## Download data into Rproj
+## Download data files into local computer
 
-```{r}
-# projects's raw data folder url. Copy pasete the url when you are inside the xxx_raw folder.
-
+```{r download files}
+# Projects's raw data folder url. 
+# Copy pasete the url when you are inside the xxx_raw folder.
 folder_url <- "https://drive.google.com/drive/u/1/folders/1qnj2_UJIA6DRHl7BR1V2UFBpNFyHvy4-"
 
+
+# get the id of the folder to be able to access it
 folder_id <- drive_get(as_id(folder_url))
 
-# get the list of files inside the folder
+
+# list of files inside the folder
 files <- drive_ls(folder_id)
 
-file_name <- files$name
 
-# download files inside folder
-# walk(files$id, ~ drive_download(as_id(.x),
-#                                  path = glue("~/raw_data/", folder$name)))
-
+# loop through files id to download to local computer
 for (i in seq_along(files$name)) {
   
-  #get each row
+  #get each row from files
   file_info <- files[i, ]
-  
-  #mkdir
-  #dir.create(files$name[i])
   
   #download files
   for (file_i in seq_along(file_info$name)) {
       drive_download(
         as_id(file_info$id[file_i]),
+        # path and file name on where and how to save each file
         path = paste0(getwd(), "/raw_data/", file_info$name[file_i]),
         overwrite = T)
 
@@ -50,5 +50,43 @@ for (i in seq_along(files$name)) {
 }
 
 
+# Check all files where downloaded
+# Count files inside the raw_data forder to make sure the number of files downloaded is what is expected.
+raw_data_path <- paste0(getwd(), "/raw_data")
+length(list.files(raw_data_path))
+
 ```
+
+## Read data
+
+```{r read data}
+
+# All csv files
+all_csv <- tibble(list.files(raw_data_path, pattern = ".csv")) %>% 
+  rename(file_name = 1) %>% 
+  mutate(path = paste0(raw_data_path, "/", file_name),
+         n = 1:n(),
+         org = str_to_lower(word(file_name, 1, sep = "_"))) %>% 
+  unite(obj_name, org, n, sep = "_", remove = FALSE)
+
+
+# Read all csvs. Create one opject per file
+for (i in all_csv$n){
+  
+  assign(all_csv$obj_name[i], read_csv(all_csv$path[i]))
+}
+
+# All xls files - If there is only one sheet in the xls files copy code above and modify for xls
+# If there are multiple sheets en each file, probably better read one by one.
+
+sio_xls_1 <- read_excel(paste0(raw_data_path, "/SIO_PAL_FISH_DATA_2011_SAS.xls"), sheet = 1, skip = 3)
+
+sio_xls_2 <- read_excel(paste0(raw_data_path, "/SIO_PAL_FISH_DATA_2011_SAS.xls"), sheet = 2)
+
+sio_xls_3 <- read_excel(paste0(raw_data_path, "/SIO_PAL_FISH_DATA_2011_SAS.xls"), sheet = 3)
+
+```
+
+
+
 
