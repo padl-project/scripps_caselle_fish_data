@@ -24,31 +24,16 @@ library(readxl)
 folder_url <- "https://drive.google.com/drive/u/1/folders/1qnj2_UJIA6DRHl7BR1V2UFBpNFyHvy4-"
 
 
-# get the id of the folder to be able to access it
-folder_id <- drive_get(as_id(folder_url))
-
-
 # list of files inside the folder
-files <- drive_ls(folder_id)
+files <- drive_ls(as_id(folder_url))
 
-
-# loop through files id to download to local computer
-for (i in seq_along(files$name)) {
-  
-  #get each row from files
-  file_info <- files[i, ]
-  
-  #download files
-  for (file_i in seq_along(file_info$name)) {
-      drive_download(
-        as_id(file_info$id[file_i]),
-        # path and file name on where and how to save each file
-        path = paste0(getwd(), "/raw_data/", file_info$name[file_i]),
-        overwrite = T)
-
-  }
-}
-
+## Download each file to local computer
+purrr::walk2(
+    map(files$id, as_id),
+    paste0("raw_data/", files$name),
+    drive_download,
+    overwrite = TRUE
+  )
 
 # Check all files where downloaded
 # Count files inside the raw_data forder to make sure the number of files downloaded is what is expected.
@@ -70,7 +55,7 @@ all_csv <- tibble(list.files(raw_data_path, pattern = ".csv")) %>%
   unite(obj_name, org, n, sep = "_", remove = FALSE)
 
 
-# Read all csvs. Create one opject per file
+# Read all csvs. Create one opject per file - UPDATE TO USE PURRR!!!
 for (i in all_csv$n){
   
   assign(all_csv$obj_name[i], read_csv(all_csv$path[i]))
