@@ -27,7 +27,7 @@ Scripps Oceanographic Institute and Caselle Lab Fish Survey Data from 2008 - Pre
 *Include what, where, and when in the entity names*
 
 | entity_position | entityname                                      | entitydescription                                                                                   | filename                           |
-|--------------|--------------|-------------------------------|--------------|
+|----------------|----------------|------------------------|----------------|
 | 1               | Scripps Caselle Fish Survey Data 2008 - Present | Data from surveys done by the Caselle Lab and Scripps OI from 2008 to present                       | scripps_caselle_fish_data.csv      |
 | 2               | Scripps Caselle Site List                       | List of the sites surveyed with geographical information for all surveys in the dataset             | scripps_caselle_site_list.csv      |
 | 3               | Scripps Caselle Taxonomy Table                  | Taxonomy Table for all of the fish species surveyed by both the Caselle Lab and the Scripps OI Team | scripps_caselle_taxonomy_table.csv |
@@ -153,7 +153,7 @@ Each row in the below table describes one column in your data table. Complete ea
 
 ## Location of datasets in the package
 
-path_data <- glue("{dir_gdrive}/DATA_RAW/Scripps_Caselle_Fish_Data/clean_data") 
+path_data <- glue("{dir_gdrive}/DATA_RAW/Scripps_Caselle_Fish_Data/clean_data")
 # Update this with the location of the data in the drive
 path_templates <- here::here("3.data_attributes")
 
@@ -219,6 +219,7 @@ for (i in files_names$position){
 
 flextable::flextable(data_attributes1) %>%
   width(width = 1)
+
 
 ```
 

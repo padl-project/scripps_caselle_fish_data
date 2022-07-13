@@ -54,7 +54,8 @@ class(fish_data$transect)
 sort(unique(fish_data$depth_zn))
 sort(unique(fish_data$species))
 sort(unique(fish_data$size_tp))
-
+class(fish_data$diver_tx_depthzn)
+sort(unique(fish_data$station_clean))
 
 ```
 
@@ -64,13 +65,17 @@ sort(unique(fish_data$size_tp))
 - Make `project` categorical 
 - Make `transect` categorical
 - Make 999999 NA for depth_zn
+- Remove the diver_tx_depth variable because all of the information is already there and it is cause a very large categorical variables table in the EML
+- Remove `station`
 
 ##### Clean the Data 
 
 ```{r}
 fish_data_clean <- fish_data %>% 
   mutate(project = as.factor(project), 
-         transect = as.factor(transect))
+         transect = as.factor(transect), 
+         diver_tx_depthzn = as.character(diver_tx_depthzn)) %>% 
+  select(-diver_tx_depthzn, -station)
 
 fish_data_clean[fish_data_clean == 999999] <- NA
 

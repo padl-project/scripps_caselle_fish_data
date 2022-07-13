@@ -3,12 +3,10 @@ project		categorical
 reef		categorical				
 date		Date		!Add datetime specifier here!		
 year		Date		!Add datetime specifier here!		
-station		categorical				
 station_clean		categorical				
 transect		categorical				
 diver		categorical				
 depth_zn		numeric	!Add units here!			
-diver_tx_depthzn		categorical				
 datatyp		categorical				
 species		categorical				
 number		numeric	!Add units here!			
