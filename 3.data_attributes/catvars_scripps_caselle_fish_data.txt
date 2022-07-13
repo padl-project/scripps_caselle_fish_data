@@ -1,0 +1,571 @@
+attributeName	code	definition
+datatyp	QUAN	
+diver	ALM	
+diver	BJZ	
+diver	JC	
+diver	JE	
+diver	JEC	
+diver	JST	
+diver	KD	
+diver	KDK	
+diver	KSP	
+diver	PC	
+diver	SAS	
+diver	SC	
+diver	SLH	
+diver_tx_depthzn	ALM_A_10	
+diver_tx_depthzn	ALM_A_20	
+diver_tx_depthzn	ALM_A_5	
+diver_tx_depthzn	ALM_B_10	
+diver_tx_depthzn	ALM_B_20	
+diver_tx_depthzn	ALM_B_5	
+diver_tx_depthzn	ALM_C_10	
+diver_tx_depthzn	ALM_C_5	
+diver_tx_depthzn	BJZ_A_10	
+diver_tx_depthzn	BJZ_B_10	
+diver_tx_depthzn	JC_A_5	
+diver_tx_depthzn	JC_B_5	
+diver_tx_depthzn	JC_C_5	
+diver_tx_depthzn	JE_A_5	
+diver_tx_depthzn	JE_B_5	
+diver_tx_depthzn	JE_C_5	
+diver_tx_depthzn	JE_D_5	
+diver_tx_depthzn	JE_E_5	
+diver_tx_depthzn	JEC_A_10	
+diver_tx_depthzn	JEC_A_20	
+diver_tx_depthzn	JEC_A_5	
+diver_tx_depthzn	JEC_B_10	
+diver_tx_depthzn	JEC_B_20	
+diver_tx_depthzn	JEC_B_5	
+diver_tx_depthzn	JEC_C_10	
+diver_tx_depthzn	JEC_C_5	
+diver_tx_depthzn	JEC_D_5	
+diver_tx_depthzn	JST_A_10	
+diver_tx_depthzn	JST_A_5	
+diver_tx_depthzn	JST_B_10	
+diver_tx_depthzn	JST_B_5	
+diver_tx_depthzn	JST_C_10	
+diver_tx_depthzn	JST_C_5	
+diver_tx_depthzn	KD_A_5	
+diver_tx_depthzn	KD_B_5	
+diver_tx_depthzn	KD_C_5	
+diver_tx_depthzn	KD_D_5	
+diver_tx_depthzn	KD_E_5	
+diver_tx_depthzn	KDK_A_5	
+diver_tx_depthzn	KDK_B_5	
+diver_tx_depthzn	KSP_A_10	
+diver_tx_depthzn	KSP_A_20	
+diver_tx_depthzn	KSP_A_5	
+diver_tx_depthzn	KSP_B_10	
+diver_tx_depthzn	KSP_B_20	
+diver_tx_depthzn	KSP_B_5	
+diver_tx_depthzn	KSP_C_10	
+diver_tx_depthzn	KSP_C_5	
+diver_tx_depthzn	PC_A_5	
+diver_tx_depthzn	PC_B_5	
+diver_tx_depthzn	PC_C_5	
+diver_tx_depthzn	PC_D_5	
+diver_tx_depthzn	SAS_A_10	
+diver_tx_depthzn	SAS_A_20	
+diver_tx_depthzn	SAS_A_5	
+diver_tx_depthzn	SAS_A_999999	
+diver_tx_depthzn	SAS_B_10	
+diver_tx_depthzn	SAS_B_20	
+diver_tx_depthzn	SAS_B_5	
+diver_tx_depthzn	SAS_B_999999	
+diver_tx_depthzn	SAS_C_10	
+diver_tx_depthzn	SAS_C_5	
+diver_tx_depthzn	SAS_C_999999	
+diver_tx_depthzn	SAS_D_10	
+diver_tx_depthzn	SAS_D_5	
+diver_tx_depthzn	SAS_E_10	
+diver_tx_depthzn	SAS_E_5	
+diver_tx_depthzn	SAS_F_10	
+diver_tx_depthzn	SAS_F_5	
+diver_tx_depthzn	SC_A_5	
+diver_tx_depthzn	SC_B_5	
+diver_tx_depthzn	SC_C_5	
+diver_tx_depthzn	SC_D_5	
+diver_tx_depthzn	SC_E_5	
+diver_tx_depthzn	SLH_A_10	
+diver_tx_depthzn	SLH_A_20	
+diver_tx_depthzn	SLH_A_5	
+diver_tx_depthzn	SLH_B_10	
+diver_tx_depthzn	SLH_B_20	
+diver_tx_depthzn	SLH_B_5	
+diver_tx_depthzn	SLH_C_10	
+diver_tx_depthzn	SLH_C_5	
+diver_tx_depthzn	SLH_D_10	
+diver_tx_depthzn	SLH_D_5	
+diver_tx_depthzn	SLH_E_10	
+diver_tx_depthzn	SLH_E_5	
+diver_tx_depthzn	SLH_F_10	
+diver_tx_depthzn	SLH_F_5	
+project	PALMYRA	
+project	PALMYRA_REEFER	
+project	SIO	
+project	TNC_PARC_Monitoring	
+project	UCSB - CASELLE	
+reef	PALMYRA	
+species	AB.VAIG	
+species	AC ALL BROWN	
+species	AC ALL YELLOW	
+species	AC BROWN WITH ORANGE TAIL	
+species	AC BROWN WITH WHITE TAIL	
+species	AC.ACHI	
+species	AC.ACNI	
+species	AC.BLOC	
+species	AC.DUSS	
+species	AC.LEUCOC	
+species	AC.LINE	
+species	AC.MACU	
+species	AC.NIGC	
+species	AC.NIGF	
+species	AC.NIGO	
+species	AC.NIGR	
+species	AC.OLIV	
+species	AC.THOM	
+species	AC.TRIO	
+species	AC.XANT	
+species	ACAN.SP	
+species	ACANTH ALL YELLOW	
+species	AE.NARI	
+species	AL.SCRI	
+species	AM.PHAL	
+species	AM.SCOP	
+species	AN.CAER	
+species	AN.MELA	
+species	AN.MELE	
+species	AN.TWIS	
+species	ANAM.SP	
+species	AP.FURC	
+species	AP.VIRE	
+species	AP.XANT	
+species	AR.MELE	
+species	AU.CHIN	
+species	BA.UNDU	
+species	BA.VIRI	
+species	BO.AXIL	
+species	BO.LOXO	
+species	BO.MESO	
+species	BO.MURI	
+species	CA.AMBL	
+species	CA.AMBO	
+species	CA.CARO	
+species	CA.DUME	
+species	CA.IGNO	
+species	CA.LUGU	
+species	CA.MACU	
+species	CA.MELA	
+species	CA.MELAN	
+species	CA.ORTH	
+species	CA.SEXF	
+species	CA.SOLA	
+species	CA.TERE	
+species	CA.VALE	
+species	CE.ARGU	
+species	CE.FLAV	
+species	CE.LEOP	
+species	CE.LORI	
+species	CE.MINI	
+species	CE.UROD	
+species	CH.ACAR	
+species	CH.AURI	
+species	CH.BENN	
+species	CH.CHAN	
+species	CH.CHLO	
+species	CH.CITR	
+species	CH.EPHI	
+species	CH.FASC	
+species	CH.FRON	
+species	CH.KLEI	
+species	CH.LUNU	
+species	CH.LUNUT	
+species	CH.MARG	
+species	CH.MEYE	
+species	CH.MICR	
+species	CH.ORNA	
+species	CH.OXYC	
+species	CH.PELE	
+species	CH.PUNC	
+species	CH.QUAD	
+species	CH.RETI	
+species	CH.SORD	
+species	CH.TRIF	
+species	CH.TRIL	
+species	CH.ULIE	
+species	CH.UNDU	
+species	CH.UNIM	
+species	CH.VAGA	
+species	CH.VAND	
+species	CH.VIRI	
+species	CH.XANT	
+species	CHEI.SP	
+species	CHLO.SP	
+species	CI.EXQU	
+species	CI.OXYC	
+species	CI.POLY	
+species	CIRR.SP	
+species	CO.AYGU	
+species	CO.CENT	
+species	CO.DUOS	
+species	CO.GAIM	
+species	CO.NEOP	
+species	CT.BINO	
+species	CT.CYAN	
+species	CT.HAWA	
+species	CT.MARG	
+species	CT.STRI	
+species	DA.ARUA	
+species	DA.AURI	
+species	DA.TRIM	
+species	DE.MACA	
+species	EC.MIDA	
+species	EL.BIPI	
+species	EP.FASC	
+species	EP.HEXA	
+species	EP.HOWL	
+species	EP.INSI	
+species	EP.MACR	
+species	EP.MELA	
+species	EP.MERR	
+species	EP.POLY	
+species	EP.SPIL	
+species	EP.TAUV	
+species	EV.ALBO	
+species	EX.BREV	
+species	FI.COMM	
+species	FO.FLAV	
+species	FO.LONG	
+species	GN.AURE	
+species	GNAT.SP	
+species	GO.VARI	
+species	GOBI.SP	
+species	GR.ALBO	
+species	GY.FLAV	
+species	GY.JAVA	
+species	GY.UNDU	
+species	HA.HORT	
+species	HA.MARG	
+species	HA.MELA	
+species	HA.ORNA	
+species	HA.TRIM	
+species	HE.FASC	
+species	HI.LONG	
+species	HO.ANNU	
+species	KY.CINE	
+species	KY.PACI	
+species	KY.VAIG	
+species	KYPH.SP	
+species	LA.BICO	
+species	LA.DIMI	
+species	LA.RUBR	
+species	LA.UNIL	
+species	LA.XANT	
+species	LE.OLIV	
+species	LE.TAPE	
+species	LE.XANT	
+species	LU.BOHA	
+species	LU.FULV	
+species	LU.GIBB	
+species	LU.KASM	
+species	LU.MONO	
+species	LU.WHIT	
+species	MA.BIRO	
+species	MA.MELE	
+species	ME.NIGE	
+species	ME.VIDU	
+species	MO.GRAN	
+species	MU.FLAV	
+species	MU.MIMI	
+species	MU.VANI	
+species	MY.ADUS	
+species	MY.AMAE	
+species	MY.BERN	
+species	MY.EARL	
+species	MY.KUNT	
+species	MY.MURD	
+species	MY.WOOD	
+species	NA.ANNU	
+species	NA.BREV	
+species	NA.HEXA	
+species	NA.LITU	
+species	NA.UNIC	
+species	NA.VLAM	
+species	NE.MAGN	
+species	NE.OPER	
+species	NE.SAMM	
+species	NO.TAEN	
+species	OD.NIGE	
+species	OS.ANGU	
+species	OS.MELE	
+species	OX.DIAG	
+species	OX.DIGR	
+species	OX.UNIF	
+species	OXYC.SP	
+species	PA.ARCA	
+species	PA.BARB	
+species	PA.CRAS	
+species	PA.CYCL	
+species	PA.FORS	
+species	PA.HEMI	
+species	PA.INSU	
+species	PA.MULT	
+species	PA.PLEU	
+species	PE.MARG	
+species	PE.OUAL	
+species	PL.ARGA	
+species	PL.DICK	
+species	PL.IMPA	
+species	PL.JOHN	
+species	PL.ORBI	
+species	PL.PHOE	
+species	PL.RHIN	
+species	PL.TAPE	
+species	PO.COEL	
+species	PO.IMPE	
+species	PR.HAMR	
+species	PS.BART	
+species	PS.COOP	
+species	PS.DISP	
+species	PS.FLAV	
+species	PS.HETE	
+species	PS.HEXA	
+species	PS.MOLU	
+species	PS.OCTO	
+species	PS.OLIV	
+species	PS.TETR	
+species	PT.EVID	
+species	PT.HETE	
+species	PT.MAGN	
+species	PT.MICR	
+species	PT.TILE	
+species	RH.ACUL	
+species	RH.RECT	
+species	SA.CAUD	
+species	SA.DIAD	
+species	SA.SPIN	
+species	SA.TIER	
+species	SC.ALTI	
+species	SC.DIMI	
+species	SC.FORS	
+species	SC.FREN	
+species	SC.GHOB	
+species	SC.GLOB	
+species	SC.LYSA	
+species	SC.NIGE	
+species	SC.OVIC	
+species	SC.PSIT	
+species	SC.RUBR	
+species	SC.SCHL	
+species	SC.SPIN	
+species	SC.TRIC	
+species	SCAR.SP	
+species	SE.CYAN	
+species	SP.BARR	
+species	SP.HELL	
+species	SP.QENI	
+species	ST.ALBI	
+species	ST.AURE	
+species	ST.BAND	
+species	ST.FASC	
+species	ST.NIGR	
+species	SU.BURS	
+species	SU.CHRY	
+species	SY.JACU	
+species	TH.AMBL	
+species	TH.HARD	
+species	TH.LUNA	
+species	TH.LUTE	
+species	TH.PURP	
+species	TH.QUIN	
+species	TH.TRIL	
+species	THAL.SP	
+species	TR.OBES	
+species	TY.CROC	
+species	VA.LOUT	
+species	XA.AURO	
+species	XA.MENT	
+species	ZA.CORN	
+species	ZE.ROST	
+species	ZE.SCOP	
+species	ZE.VELI	
+station	BARREN	
+station	CHANNEL	
+station	DRT1	
+station	DRT2	
+station	DRT3	
+station	ETIP1	
+station	ETIP2	
+station	ETIP3	
+station	ETIP4	
+station	FR1	
+station	FR2	
+station	FR3	
+station	FR4	
+station	FR5	
+station	FR6	
+station	FR7	
+station	FR8	
+station	FR9	
+station	GBANGER	
+station	GBANGER CENTRAL	
+station	GBANGER WEST	
+station	HOLEI	
+station	LG1	
+station	LONGINE SE	
+station	LONGLINE NE	
+station	Longline NE Inner	
+station	Longline NE INNER	
+station	LONGLINE NE INNER	
+station	LONGLINE NE OUT	
+station	Longline NE OUTER	
+station	LONGLINE NE OUTER	
+station	LONGLINE NORTHEAST	
+station	LONGLINE NORTHEAST OUTER	
+station	LONGLINE NORTHEAST-OUTER	
+station	LONGLINE NORTHWEST	
+station	LONGLINE NORTHWEST OUTER	
+station	LONGLINE NORTHWEST-OUTER	
+station	LONGLINE NW	
+station	LONGLINE NW INNER	
+station	LONGLINE NW OUT	
+station	Longline NW OUTER	
+station	LONGLINE NW OUTER	
+station	LONGLINE SE	
+station	Longline SE Inner	
+station	Longline SE INNER	
+station	LONGLINE SE INNER	
+station	LONGLINE SE OUT	
+station	Longline SE OUTER	
+station	LONGLINE SE OUTER	
+station	LONGLINE SOUTHEAST	
+station	LONGLINE SOUTHEAST OUTER	
+station	LONGLINE SOUTHEAST-OUTER	
+station	LONGLINE SOUTHWEST	
+station	LONGLINE SOUTHWEST OUTER	
+station	LONGLINE SOUTHWEST-OUTER	
+station	LONGLINE SW	
+station	LONGLINE SW INNER	
+station	LONGLINE SW OUT	
+station	Longline SW OUTER	
+station	LONGLINE SW OUTER	
+station	LONGLINER	
+station	LONGLINER SOUTHWEST	
+station	MARAGOS	
+station	N_BARREN1	
+station	N_BARREN2	
+station	NBEACHW	
+station	NORTH BARREN	
+station	PAL30	
+station	PALF14	
+station	PALF17	
+station	PALF2	
+station	PALF22	
+station	PALF25	
+station	PARADISE	
+station	PENGUIN SPIT BACKREEF	
+station	PENGUIN SPIT OUTER	
+station	PENGUIN_INNER	
+station	PENGUIN_MID	
+station	PENGUIN_OUTER	
+station	PENGUINSPITBR	
+station	PENGUINSPITFR	
+station	RT1	
+station	RT10	
+station	RT13	
+station	RT2	
+station	RT20	
+station	RT21	
+station	RT22	
+station	RT23	
+station	RT25	
+station	RT3	
+station	RT4	
+station	RT5	
+station	RT6	
+station	RT7	
+station	RT8	
+station	RT9	
+station	RUBBLE PILE	
+station	RUBBLEPILE	
+station	RUBBLEPILE EAST	
+station	RUBBLEPILE MOORING	
+station	TORTUGONES	
+station	WESTERN TERRACE	
+station	WTIP6	
+station	WTIP7	
+station	WTIP8	
+station	WTIP9	
+station_clean	CHANNEL	
+station_clean	DRT1	
+station_clean	DRT2	
+station_clean	DRT3	
+station_clean	ETIP1	
+station_clean	ETIP2	
+station_clean	ETIP3	
+station_clean	ETIP4	
+station_clean	FR1	
+station_clean	FR2	
+station_clean	FR4	
+station_clean	FR5	
+station_clean	FR6	
+station_clean	FR7	
+station_clean	FR8	
+station_clean	FR9	
+station_clean	GBANGER	
+station_clean	GBANGER WEST	
+station_clean	HOLEI	
+station_clean	LG1	
+station_clean	LONGLINE NE INNER	
+station_clean	LONGLINE NE OUTER	
+station_clean	LONGLINE NW INNER	
+station_clean	LONGLINE NW OUTER	
+station_clean	LONGLINE SE INNER	
+station_clean	LONGLINE SE OUTER	
+station_clean	LONGLINE SW INNER	
+station_clean	LONGLINE SW OUTER	
+station_clean	LONGLINER	
+station_clean	MARAGOS	
+station_clean	NBEACHW	
+station_clean	NORTH BARREN	
+station_clean	PAL30	
+station_clean	PALF14	
+station_clean	PALF17	
+station_clean	PALF2	
+station_clean	PALF22	
+station_clean	PALF25	
+station_clean	PARADISE	
+station_clean	PENGUIN SPIT BACKREEF	
+station_clean	PENGUIN SPIT FOREREEF	
+station_clean	PENGUIN SPIT INNER	
+station_clean	PENGUIN SPIT MID	
+station_clean	RT10	
+station_clean	RT13	
+station_clean	RT2	
+station_clean	RT20	
+station_clean	RT21	
+station_clean	RT22	
+station_clean	RT23	
+station_clean	RT25	
+station_clean	RT3	
+station_clean	RT4	
+station_clean	RT5	
+station_clean	RT6	
+station_clean	RT7	
+station_clean	RT8	
+station_clean	RT9	
+station_clean	RUBBLEPILE	
+station_clean	RUBBLEPILE EAST	
+station_clean	TORTUGONES	
+station_clean	WESTERN TERRACE	
+station_clean	WTIP6	
+station_clean	WTIP7	
+station_clean	WTIP8	
+station_clean	WTIP9	
+transect	A	
+transect	B	
+transect	C	
+transect	D	
+transect	E	
+transect	F	

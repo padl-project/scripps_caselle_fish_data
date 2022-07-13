@@ -1,0 +1,159 @@
+---
+title: "Clean Raw Data"
+output: html_document
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+librarian::shelf("freeR", "glue", "googledrive", "here", "janitor", "lubridate", "readxl", "tidyverse")
+
+options(scipen=999)
+
+dir_gdrive <- "/Volumes/GoogleDrive/Shared drives/Palmyra_DataTransfer_EDI_Project"
+```
+
+## Read in the Data from Google Drive 
+
+To do this step, you need to have Google Drive installed on your computer so that you can access Google Drive files using Google File Stream 
+
+```{r}
+
+fish_data <- read_csv(glue("{dir_gdrive}/DATA_RAW/Scripps_Caselle_Fish_Data/PARC_FISH_DATA_Temporary.csv")) %>% 
+  clean_names()
+
+site_list <- read_excel(glue("{dir_gdrive}/DATA_RAW/Scripps_Caselle_Fish_Data/PARC_SITE_LIST_Temporary.xlsx")) %>% 
+  clean_names()
+
+taxonomy <- read_excel(glue("{dir_gdrive}/DATA_RAW/Scripps_Caselle_Fish_Data/PARC_FISH_Taxonomy_Table_Temporary.xlsx")) %>% 
+  clean_names()
+
+
+
+```
+
+
+## Explore the Data 
+
+### Fish Data 
+
+```{r}
+str(fish_data)
+
+sort(unique(fish_data$project))
+class(fish_data$project)
+sort(unique(fish_data$reef))
+sort(unique(fish_data$date))
+class(fish_data$date)
+sort(unique(fish_data$station))
+sort(unique(fish_data$station_clean))
+class(fish_data$station_clean)
+sort(unique(fish_data$transect))
+class(fish_data$transect)
+sort(unique(fish_data$depth_zn))
+sort(unique(fish_data$species))
+sort(unique(fish_data$size_tp))
+
+
+```
+
+
+#### Fish Data Changes Required 
+ 
+- Make `project` categorical 
+- Make `transect` categorical
+- Make 999999 NA for depth_zn
+
+##### Clean the Data 
+
+```{r}
+fish_data_clean <- fish_data %>% 
+  mutate(project = as.factor(project), 
+         transect = as.factor(transect))
+
+fish_data_clean[fish_data_clean == 999999] <- NA
+
+
+write_csv(fish_data_clean, glue("{dir_gdrive}/DATA_RAW/Scripps_Caselle_Fish_Data/clean_data/scripps_caselle_fish_data.csv"))
+
+```
+
+
+### Site List Data 
+
+```{r}
+str(site_list)
+
+sort(unique(site_list$habitat_zone))
+sort(unique(site_list$lat_dd))
+class(site_list$lat_dd)
+class(site_list$long_dd)
+sort(unique(site_list$activity))
+class(site_list$activity)
+
+```
+
+
+#### Site List Changes 
+
+- Move the `station_clean` to the first column because that is the reference to the other table 
+- Make `lat_dd` & `long_dd` numeric 
+- make  `activity` categorical 
+
+##### Clean the Data 
+
+```{r}
+
+sort(unique(site_list$lat_dd))
+
+site_list_clean <- site_list %>% 
+  select(station_clean, everything())
+
+site_list_clean[site_list_clean == "NA"] <- NA
+
+site_list_clean <- site_list_clean %>% 
+  mutate(lat_dd = as.numeric(lat_dd), 
+         long_dd = as.numeric(long_dd), 
+         activity = as.factor(activity))
+
+write_csv(site_list_clean, glue("{dir_gdrive}/DATA_RAW/Scripps_Caselle_Fish_Data/clean_data/scripps_caselle_site_list.csv"))
+```
+
+
+### Taxonomy Table 
+
+```{r}
+str(taxonomy)
+sort(unique(taxonomy$trophic_group))
+class(taxonomy$trophic_group)
+sort(unique(taxonomy$length_type))
+sort(unique(taxonomy$species))
+
+class(taxonomy$family)
+```
+
+#### Taxonomy Table Changes 
+
+- Move  `species` to the first column because it is the link to the other table.
+- Make `trophic_group` categorical 
+- Make  `length_type` categorical and change ? to NA 
+
+##### Clean the Data 
+
+```{r}
+taxonomy_clean <- taxonomy %>% 
+  select(species, everything())
+
+taxonomy_clean[taxonomy_clean == "?" | taxonomy_clean == "??" ] <- NA
+
+taxonomy_clean <- taxonomy_clean %>% 
+  mutate(length_type = as.factor(length_type), 
+         trophic_group = as.factor(trophic_group))
+
+write_csv(taxonomy_clean, glue("{dir_gdrive}/DATA_RAW/Scripps_Caselle_Fish_Data/clean_data/scripps_caselle_taxonomy_table.csv"))
+
+```
+
+
+

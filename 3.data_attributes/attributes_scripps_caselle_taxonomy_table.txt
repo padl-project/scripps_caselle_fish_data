@@ -1,0 +1,10 @@
+attributeName	attributeDefinition	class	unit	dateTimeFormatString	missingValueCode	missingValueCodeExplanation
+species		character				
+family		categorical				
+species_code		character				
+taxon		character				
+trophic_group		categorical				
+length_type		categorical				
+lcf		numeric	!Add units here!			
+lw_a		numeric	!Add units here!			
+lw_b		numeric	!Add units here!			

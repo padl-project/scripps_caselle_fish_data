@@ -1,0 +1,76 @@
+---
+title: "Upload files to Drive"
+author: "Camila Vargas"
+date: "9/30/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(googledrive)
+library(tidyverse)
+
+```
+
+
+## Upload to dive
+Data
+```{r}
+
+## Finalized data folder url
+final_files_url <- " "
+
+## Upload data 
+## One file
+# **UPADATE FILE PATH AND NAME**
+
+drive_upload(media = paste0(getwd(),"/7.clean_data/FILE_NAME.csv"),
+             path = as_id(final_files_url),
+             name = "FILE NAME",
+             type = "csv")
+
+
+## OR
+## Multiple files
+# path_data <- here::here("7.clean_data")
+# 
+# data_files <- tibble(
+#   list.files(path_data, pattern = "csv")) %>% 
+#   rename(file_name = 1)
+# 
+# 
+# for (i in data_files$file_name){
+#   
+#   drive_upload(media = paste0(getwd(), "/7.clean_data/", i),
+#              path = as_id(final_files_url),
+#              name = i,
+#              type = "csv")}
+
+
+
+```
+
+Metadata Doc
+
+```{r}
+## Upload metadata
+# **UPDATE FILE NAME** last_name_topic_metadata
+
+drive_upload(media = here::here("2.metadata_doc/metadata_doc.docx"),
+             path = as_id(final_files_url),
+             name = "FILE NAME_metadata.docx",
+             type = "docx")
+```
+
+xml file
+
+```{r}
+# **UPDATE project ID and EDI ID**
+
+drive_upload(media = here::here("project.XX/edi.XX.xml"),
+             path = as_id(final_files_url),
+             name = "edi.XX.xml")
+
+```
+
