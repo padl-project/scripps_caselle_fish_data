@@ -27,7 +27,7 @@ Scripps Oceanographic Institute and Caselle Lab Fish Survey Data from 2008 - Pre
 *Include what, where, and when in the entity names*
 
 | entity_position | entityname                                      | entitydescription                                                                                   | filename                           |
-|----------------|----------------|------------------------|----------------|
+|-----------------|-------------------------------------------------|-----------------------------------------------------------------------------------------------------|------------------------------------|
 | 1               | Scripps Caselle Fish Survey Data 2008 - Present | Data from surveys done by the Caselle Lab and Scripps OI from 2008 to present                       | scripps_caselle_fish_data.csv      |
 | 2               | Scripps Caselle Site List                       | List of the sites surveyed with geographical information for all surveys in the dataset             | scripps_caselle_site_list.csv      |
 | 3               | Scripps Caselle Taxonomy Table                  | Taxonomy Table for all of the fish species surveyed by both the Caselle Lab and the Scripps OI Team | scripps_caselle_taxonomy_table.csv |
@@ -45,7 +45,7 @@ Scripps Oceanographic Institute and Caselle Lab Fish Survey Data from 2008 - Pre
 **We highly encourage you to create an ORCID if you don't already have one.** [Find more information here.](https://info.orcid.org/what-is-orcid/)
 
 | **First Name** | **Last Name** | **Organization**                       | **Email**               | **ORCID ID**        |
-|---------------|---------------|---------------|---------------|---------------|
+|----------------|---------------|----------------------------------------|-------------------------|---------------------|
 | Peter          | Carlson       | University of California Santa Barbara | peter.carlson\@ucsb.edu | 0000-0003-2893-2507 |
 |                |               |                                        |                         |                     |
 |                |               |                                        |                         |                     |
@@ -57,7 +57,7 @@ Scripps Oceanographic Institute and Caselle Lab Fish Survey Data from 2008 - Pre
 **We highly encourage you to create an ORCID if you don't already have one.** [Find more information here.](https://info.orcid.org/what-is-orcid/)
 
 | First Name | Last Name      | Organization                                              | Email                      | ORCID ID | Role in Project  |
-|------------|------------|------------|------------|------------|------------|
+|------------|----------------|-----------------------------------------------------------|----------------------------|----------|------------------|
 | Peter      | Carlson        | University of California Santa Barbara                    | peter.carlson\@ucsb.edu    |          | Contact          |
 | Camila     | Vargas Poulsen | PADL Data Manager, University of California Santa Barbara | camilavargas\@ucsb.edu     |          | associated party |
 | Paloma     | Cartwright     | Environmental Data Initiative                             | palomacartwright\@ucsb.edu |          | associated party |
@@ -92,7 +92,7 @@ flextable::flextable(keyword_table) %>%
 *List only the main PI of a grant that supported this project, starting with the main grant first. Add rows to the table if several grants were involved.*
 
 | PI First Name | PI Last Name | PI Email | PI ORCID ID | Title of Grant | Funding Agency | Funding ID Number |
-|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
+|---------------|--------------|----------|-------------|----------------|----------------|-------------------|
 |               |              |          |             |                |                |                   |
 |               |              |          |             |                |                |                   |
 |               |              |          |             |                |                |                   |

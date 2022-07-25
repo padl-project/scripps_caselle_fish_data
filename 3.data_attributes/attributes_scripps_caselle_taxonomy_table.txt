@@ -1,6 +1,6 @@
 attributeName	attributeDefinition	class	unit	dateTimeFormatString	missingValueCode	missingValueCodeExplanation
 species		character				
-family		categorical				
+family		character				
 species_code		character				
 taxon		character				
 trophic_group		categorical				

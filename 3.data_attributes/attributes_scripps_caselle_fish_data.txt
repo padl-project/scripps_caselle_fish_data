@@ -8,7 +8,7 @@ transect		categorical
 diver		categorical				
 depth_zn		numeric	!Add units here!			
 datatyp		categorical				
-species		categorical				
+species		character				
 number		numeric	!Add units here!			
 size		numeric	!Add units here!			
 size_tp		numeric	!Add units here!			
