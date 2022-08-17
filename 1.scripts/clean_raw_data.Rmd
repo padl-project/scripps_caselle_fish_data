@@ -20,14 +20,14 @@ To do this step, you need to have Google Drive installed on your computer so tha
 
 ```{r}
 
-fish_data <- read_csv(glue("{dir_gdrive}/DATA_RAW/Scripps_Caselle_Fish_Data/PARC_FISH_DATA_Temporary.csv")) %>% 
+fish_data <- read_csv(glue("{dir_gdrive}/Data/Caselle Scripps Fish Data/casell_sandin_fish_clean/PARC_FishSurvey_Data_v1.csv")) %>% 
   clean_names()
 
-site_list <- read_excel(glue("{dir_gdrive}/DATA_RAW/Scripps_Caselle_Fish_Data/PARC_SITE_LIST_Temporary.xlsx")) %>% 
+site_list <- read_csv(glue("{dir_gdrive}/Data/Caselle Scripps Fish Data/casell_sandin_fish_clean/PANWR_PARC_SITELIST_v1.csv")) %>% 
   clean_names()
 
-taxonomy <- read_excel(glue("{dir_gdrive}/DATA_RAW/Scripps_Caselle_Fish_Data/PARC_FISH_Taxonomy_Table_Temporary.xlsx")) %>% 
-  clean_names()
+# taxonomy <- read_excel(glue("{dir_gdrive}/DATA_RAW/Scripps_Caselle_Fish_Data/PARC_FISH_Taxonomy_Table_Temporary.xlsx")) %>% 
+#   clean_names()
 
 
 
@@ -46,27 +46,20 @@ class(fish_data$project)
 sort(unique(fish_data$reef))
 sort(unique(fish_data$date))
 class(fish_data$date)
-sort(unique(fish_data$station))
 sort(unique(fish_data$station_clean))
 class(fish_data$station_clean)
 sort(unique(fish_data$transect))
 class(fish_data$transect)
 sort(unique(fish_data$depth_zn))
 sort(unique(fish_data$species))
-sort(unique(fish_data$size_tp))
 class(fish_data$diver_tx_depthzn)
-sort(unique(fish_data$station_clean))
 
 ```
 
 
 #### Fish Data Changes Required 
- 
-- Make `project` categorical 
-- Make `transect` categorical
-- Make 999999 NA for depth_zn
+
 - Remove the diver_tx_depth variable because all of the information is already there and it is cause a very large categorical variables table in the EML
-- Remove `station`
 
 ##### Clean the Data 
 
@@ -75,12 +68,10 @@ fish_data_clean <- fish_data %>%
   mutate(project = as.factor(project), 
          transect = as.factor(transect), 
          diver_tx_depthzn = as.character(diver_tx_depthzn)) %>% 
-  select(-diver_tx_depthzn, -station)
-
-fish_data_clean[fish_data_clean == 999999] <- NA
+  select(-diver_tx_depthzn)
 
 
-write_csv(fish_data_clean, glue("{dir_gdrive}/DATA_RAW/Scripps_Caselle_Fish_Data/clean_data/scripps_caselle_fish_data.csv"))
+write_csv(fish_data_clean, glue("{dir_gdrive}/Data/Caselle Scripps Fish Data/casell_sandin_fish_clean/clean_data/scripps_caselle_fish_data.csv"))
 
 ```
 
@@ -122,43 +113,43 @@ site_list_clean <- site_list_clean %>%
          long_dd = as.numeric(long_dd), 
          activity = as.factor(activity))
 
-write_csv(site_list_clean, glue("{dir_gdrive}/DATA_RAW/Scripps_Caselle_Fish_Data/clean_data/scripps_caselle_site_list.csv"))
+write_csv(site_list_clean, glue("{dir_gdrive}/Data/Caselle Scripps Fish Data/casell_sandin_fish_clean/clean_data/scripps_caselle_site_list.csv"))
 ```
 
 
-### Taxonomy Table 
+<!-- ### Taxonomy Table  -->
 
-```{r}
-str(taxonomy)
-sort(unique(taxonomy$trophic_group))
-class(taxonomy$trophic_group)
-sort(unique(taxonomy$length_type))
-sort(unique(taxonomy$species))
+<!-- ```{r} -->
+<!-- str(taxonomy) -->
+<!-- sort(unique(taxonomy$trophic_group)) -->
+<!-- class(taxonomy$trophic_group) -->
+<!-- sort(unique(taxonomy$length_type)) -->
+<!-- sort(unique(taxonomy$species)) -->
 
-class(taxonomy$family)
-```
+<!-- class(taxonomy$family) -->
+<!-- ``` -->
 
-#### Taxonomy Table Changes 
+<!-- #### Taxonomy Table Changes  -->
 
-- Move  `species` to the first column because it is the link to the other table.
-- Make `trophic_group` categorical 
-- Make  `length_type` categorical and change ? to NA 
+<!-- - Move  `species` to the first column because it is the link to the other table. -->
+<!-- - Make `trophic_group` categorical  -->
+<!-- - Make  `length_type` categorical and change ? to NA  -->
 
-##### Clean the Data 
+<!-- ##### Clean the Data  -->
 
-```{r}
-taxonomy_clean <- taxonomy %>% 
-  select(species, everything())
+<!-- ```{r} -->
+<!-- taxonomy_clean <- taxonomy %>%  -->
+<!--   select(species, everything()) -->
 
-taxonomy_clean[taxonomy_clean == "?" | taxonomy_clean == "??" ] <- NA
+<!-- taxonomy_clean[taxonomy_clean == "?" | taxonomy_clean == "??" ] <- NA -->
 
-taxonomy_clean <- taxonomy_clean %>% 
-  mutate(length_type = as.factor(length_type), 
-         trophic_group = as.factor(trophic_group))
+<!-- taxonomy_clean <- taxonomy_clean %>%  -->
+<!--   mutate(length_type = as.factor(length_type),  -->
+<!--          trophic_group = as.factor(trophic_group)) -->
 
-write_csv(taxonomy_clean, glue("{dir_gdrive}/DATA_RAW/Scripps_Caselle_Fish_Data/clean_data/scripps_caselle_taxonomy_table.csv"))
+<!-- write_csv(taxonomy_clean, glue("{dir_gdrive}/DATA_RAW/Scripps_Caselle_Fish_Data/clean_data/scripps_caselle_taxonomy_table.csv")) -->
 
-```
+<!-- ``` -->
 
 
 

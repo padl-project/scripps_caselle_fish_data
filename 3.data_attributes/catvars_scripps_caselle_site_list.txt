@@ -1,10 +1,4 @@
 attributeName	code	definition
 activity	BENTHIC	
 activity	FISH	
-activity	NA	
-habitat_zone	Channel	
-habitat_zone	Deep_reef_terrace	
-habitat_zone	Forereef	
-habitat_zone	Shallow_reef_terrace	
-habitat_zone	NA	
 reef	PALMYRA	

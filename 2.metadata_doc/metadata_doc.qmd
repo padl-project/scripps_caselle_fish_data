@@ -27,7 +27,7 @@ Scripps Oceanographic Institute and Caselle Lab Fish Survey Data from 2008 - Pre
 *Include what, where, and when in the entity names*
 
 | entity_position | entityname                                      | entitydescription                                                                                   | filename                           |
-|-----------------|-------------------------------------------------|-----------------------------------------------------------------------------------------------------|------------------------------------|
+|-----------------|-----------------|--------------------|------------------|
 | 1               | Scripps Caselle Fish Survey Data 2008 - Present | Data from surveys done by the Caselle Lab and Scripps OI from 2008 to present                       | scripps_caselle_fish_data.csv      |
 | 2               | Scripps Caselle Site List                       | List of the sites surveyed with geographical information for all surveys in the dataset             | scripps_caselle_site_list.csv      |
 | 3               | Scripps Caselle Taxonomy Table                  | Taxonomy Table for all of the fish species surveyed by both the Caselle Lab and the Scripps OI Team | scripps_caselle_taxonomy_table.csv |
@@ -45,7 +45,7 @@ Scripps Oceanographic Institute and Caselle Lab Fish Survey Data from 2008 - Pre
 **We highly encourage you to create an ORCID if you don't already have one.** [Find more information here.](https://info.orcid.org/what-is-orcid/)
 
 | **First Name** | **Last Name** | **Organization**                       | **Email**               | **ORCID ID**        |
-|----------------|---------------|----------------------------------------|-------------------------|---------------------|
+|---------------|---------------|---------------|---------------|---------------|
 | Peter          | Carlson       | University of California Santa Barbara | peter.carlson\@ucsb.edu | 0000-0003-2893-2507 |
 |                |               |                                        |                         |                     |
 |                |               |                                        |                         |                     |
@@ -57,7 +57,7 @@ Scripps Oceanographic Institute and Caselle Lab Fish Survey Data from 2008 - Pre
 **We highly encourage you to create an ORCID if you don't already have one.** [Find more information here.](https://info.orcid.org/what-is-orcid/)
 
 | First Name | Last Name      | Organization                                              | Email                      | ORCID ID | Role in Project  |
-|------------|----------------|-----------------------------------------------------------|----------------------------|----------|------------------|
+|------------|------------|------------|------------|------------|------------|
 | Peter      | Carlson        | University of California Santa Barbara                    | peter.carlson\@ucsb.edu    |          | Contact          |
 | Camila     | Vargas Poulsen | PADL Data Manager, University of California Santa Barbara | camilavargas\@ucsb.edu     |          | associated party |
 | Paloma     | Cartwright     | Environmental Data Initiative                             | palomacartwright\@ucsb.edu |          | associated party |
@@ -92,7 +92,7 @@ flextable::flextable(keyword_table) %>%
 *List only the main PI of a grant that supported this project, starting with the main grant first. Add rows to the table if several grants were involved.*
 
 | PI First Name | PI Last Name | PI Email | PI ORCID ID | Title of Grant | Funding Agency | Funding ID Number |
-|---------------|--------------|----------|-------------|----------------|----------------|-------------------|
+|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
 |               |              |          |             |                |                |                   |
 |               |              |          |             |                |                |                   |
 |               |              |          |             |                |                |                   |
@@ -147,13 +147,12 @@ Each row in the below table describes one column in your data table. Complete ea
 -   **Date format:** Please tell us exactly how the date and time are formatted: e.g., mm/dd/yyyy hh:mm:ss, plus the time zone and whether daylight savings were observed. ISO date format of YYYY-MM-DD or YYYY-MM-DD hh:mm:ss is preferred.
 -   **Missing value code:** If a code for 'no data' is used, please specify: e.g., -99999, NA
 -   **Missing value code Explanation:** Why are these values missing? e.g.: value not available, value not recorded.
--   
 
 ```{r, create_data_attributes_tables, echo = FALSE, message= FALSE, warning= FALSE}
 
 ## Location of datasets in the package
 
-path_data <- glue("{dir_gdrive}/DATA_RAW/Scripps_Caselle_Fish_Data/clean_data")
+path_data <- glue("{dir_gdrive}/Data/Caselle Scripps Fish Data/casell_sandin_fish_clean/clean_data")
 # Update this with the location of the data in the drive
 path_templates <- here::here("3.data_attributes")
 
@@ -209,8 +208,8 @@ read_attribute <- function(test){
 for (i in files_names$position){
 
   assign(files_names$attribute_name[i], read_attribute(files_names$file_name[i]))
-
-  }
+  # Figure out how to add the entityposition to the beginning of the attribute table
+}
 
 
 ```
@@ -232,8 +231,8 @@ flextable::flextable(data_attributes2) %>%
 
 ```{r, attribute_table_3, echo=FALSE, message= FALSE, warning= FALSE}
 
-flextable::flextable(data_attributes3) %>%
-  width(width = 1)
+# flextable::flextable(data_attributes3) %>%
+#   width(width = 1)
 
 ```
 
@@ -289,9 +288,9 @@ flextable::flextable(catvar2) %>%
 <br>
 
 ```{r, cat_vars_table_3, echo=FALSE, message= FALSE, warning= FALSE}
-flextable::flextable(catvar3) %>%
-  autofit(add_w = 0.2, add_h = 0.1, part = c("body", "header"), unit = "in")
-  
+# flextable::flextable(catvar3) %>%
+#   autofit(add_w = 0.2, add_h = 0.1, part = c("body", "header"), unit = "in")
+#   
 ```
 
 ## 15. Scripts/code (software)
@@ -335,6 +334,6 @@ flextable::flextable(catvar3) %>%
 
 # Copy the doc file that was created to the correct folder in drive
 # Example below
-file.copy(from = here("2.metadata_doc/metadata_doc.docx"), to = glue("{dir_gdrive}/DATA_metadata/scripps_caselle_fish/scripps_caselle_fish_metadata"))
+file.copy(from = here("2.metadata_doc/metadata_doc.docx"), to = glue("{dir_gdrive}/Data/Caselle Scripps Fish Data/casell_sandin_fish_clean/clean_data/scripps_caselle_fish_metadata"))
 
 ```

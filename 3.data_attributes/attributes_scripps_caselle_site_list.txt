@@ -1,11 +1,11 @@
 attributeName	attributeDefinition	class	unit	dateTimeFormatString	missingValueCode	missingValueCodeExplanation
 station_clean		character				
 reef		categorical				
-habitat_zone		categorical				
+site		character				
+station		character				
+habitat_zone		character				
 depth_zone_m		numeric	!Add units here!			
 lat_dd		numeric	!Add units here!			
 long_dd		numeric	!Add units here!			
-y_proj		numeric	!Add units here!			
-x_proj		numeric	!Add units here!			
 activity		categorical				
 notes		character				
