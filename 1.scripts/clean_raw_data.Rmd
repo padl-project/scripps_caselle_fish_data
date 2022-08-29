@@ -111,7 +111,9 @@ site_list_clean[site_list_clean == "NA"] <- NA
 site_list_clean <- site_list_clean %>% 
   mutate(lat_dd = as.numeric(lat_dd), 
          long_dd = as.numeric(long_dd), 
-         activity = as.factor(activity))
+         activity = as.factor(activity)) %>% 
+  filter(activity == "FISH") %>% 
+  select(-activity)
 
 write_csv(site_list_clean, glue("{dir_gdrive}/Data/Caselle Scripps Fish Data/casell_sandin_fish_clean/clean_data/scripps_caselle_site_list.csv"))
 ```
